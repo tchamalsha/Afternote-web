@@ -1,11 +1,15 @@
 "use client"
 
-import { useState } from "react"
+import { useState, Suspense } from "react"
 import type { FormEvent } from "react"
 import Link from "next/link"
-import { ArrowLeft, Lock, CheckCircle, Eye, EyeOff } from "lucide-react"
+import { useSearchParams } from "next/navigation"
+import { ArrowLeft, Lock, CheckCircle, Eye, EyeOff, ShieldX } from "lucide-react"
 
-export default function ResetPasswordPage() {
+function ResetPasswordContent() {
+  const searchParams = useSearchParams()
+  const token = searchParams.get("token")
+
   const [submitted, setSubmitted] = useState(false)
   const [password, setPassword] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
@@ -39,6 +43,49 @@ export default function ResetPasswordPage() {
     setSubmitted(true)
   }
 
+  // ── No / invalid token ───────────────────────────────────────────────────
+  if (!token) {
+    return (
+      <main className="flex min-h-screen flex-col items-center justify-center px-6 py-16">
+        <Link href="/" className="mb-10 flex items-center gap-2">
+          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary">
+            <span className="text-sm font-bold text-primary-foreground font-serif">A</span>
+          </div>
+          <span className="text-xl font-semibold tracking-tight text-foreground">Afternote</span>
+        </Link>
+
+        <div className="w-full max-w-md">
+          <div className="flex flex-col items-center rounded-2xl bg-card p-10 text-center">
+            <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-destructive/10">
+              <ShieldX className="h-7 w-7 text-destructive" />
+            </div>
+            <h1 className="font-serif text-2xl font-semibold text-foreground">
+              Link Invalid or Expired
+            </h1>
+            <p className="mt-3 max-w-sm text-sm text-muted-foreground leading-relaxed">
+              This password‑reset link is invalid or has expired. Password reset
+              links are only valid for a limited time. Please request a new one.
+            </p>
+            <Link
+              href="/forgot-password"
+              className="mt-8 flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+            >
+              Request a new link
+            </Link>
+            <Link
+              href="/"
+              className="mt-4 flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Back to Home
+            </Link>
+          </div>
+        </div>
+      </main>
+    )
+  }
+
+  // ── Valid token — show the reset form ────────────────────────────────────
   return (
     <main className="flex min-h-screen flex-col items-center justify-center px-6 py-16">
       {/* Logo */}
@@ -207,5 +254,13 @@ export default function ResetPasswordPage() {
         )}
       </div>
     </main>
+  )
+}
+
+export default function ResetPasswordPage() {
+  return (
+    <Suspense fallback={null}>
+      <ResetPasswordContent />
+    </Suspense>
   )
 }
