@@ -27,12 +27,36 @@ const contactInfo = [
   },
 ]
 
+
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState("")
+  const [loading, setLoading] = useState(false)
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
-    setSubmitted(true)
+    setError("")
+    setLoading(true)
+    const form = e.currentTarget
+    const formData = new FormData(form)
+    const data = Object.fromEntries(formData.entries())
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      })
+      if (!res.ok) {
+        const out = await res.json().catch(() => ({}))
+        setError(out.error || "Failed to send message. Please try again.")
+      } else {
+        setSubmitted(true)
+      }
+    } catch (err) {
+      setError("Failed to send message. Please try again.")
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -135,12 +159,18 @@ export default function ContactPage() {
                   />
                 </div>
 
+                {error && (
+                  <p className="rounded-lg bg-destructive/10 px-4 py-2.5 text-sm text-destructive" role="alert">
+                    {error}
+                  </p>
+                )}
                 <button
                   type="submit"
-                  className="flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+                  className="flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-60"
+                  disabled={loading}
                 >
                   <Send className="h-4 w-4" />
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
               </form>
             )}
