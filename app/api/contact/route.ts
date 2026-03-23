@@ -11,8 +11,8 @@ export async function POST(req: Request) {
     }
 
     await resend.emails.send({
-      from: "Afternote Contact <noreply@afternote.com>",
-      to: ["hello@afternote.com"],
+      from: "EchoLove Contact <noreply@echolove.com>",
+      to: ["hello@echolove.com"],
       subject: `[Contact] ${subject}`,
       reply_to: email,
       html: `<p><b>Name:</b> ${name}</p><p><b>Email:</b> ${email}</p><p><b>Message:</b><br/>${message.replace(/\n/g, '<br/>')}</p>`

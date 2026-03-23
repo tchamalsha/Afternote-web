@@ -19,9 +19,9 @@ export default function ForgotPasswordPage() {
       {/* Logo */}
       <Link href="/" className="mb-10 flex items-center gap-2">
         <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary">
-          <span className="text-sm font-bold text-primary-foreground font-serif">A</span>
+          <span className="text-sm font-bold text-primary-foreground font-serif">E</span>
         </div>
-        <span className="text-xl font-semibold tracking-tight text-foreground">Afternote</span>
+        <span className="text-xl font-semibold tracking-tight text-foreground">EchoLove</span>
       </Link>
 
       <div className="w-full max-w-md">

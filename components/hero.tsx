@@ -34,7 +34,7 @@ export function Hero() {
         </h1>
 
         <p className="mx-auto mt-6 max-w-xl text-balance text-base leading-relaxed text-muted-foreground sm:text-lg">
-          Afternote is a calm, secure space to store messages, memories, and
+          EchoLove is a calm, secure space to store messages, memories, and
           meaningful words for the people you love — delivered when the time
           is right.
         </p>

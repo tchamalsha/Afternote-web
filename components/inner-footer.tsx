@@ -6,9 +6,9 @@ export function InnerFooter() {
       <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 md:flex-row md:justify-between">
         <div className="flex items-center gap-2">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-            <span className="text-xs font-bold text-primary-foreground font-serif">A</span>
+            <span className="text-xs font-bold text-primary-foreground font-serif">E</span>
           </div>
-          <span className="text-lg font-semibold text-foreground">Afternote</span>
+          <span className="text-lg font-semibold text-foreground">EchoLove</span>
         </div>
 
         <nav className="flex flex-wrap justify-center gap-6">
@@ -24,7 +24,7 @@ export function InnerFooter() {
         </nav>
 
         <p className="text-xs text-muted-foreground">
-          &copy; {new Date().getFullYear()} Afternote. All rights reserved.
+          &copy; {new Date().getFullYear()} EchoLove. All rights reserved.
         </p>
       </div>
     </footer>

@@ -6,19 +6,19 @@ import { Quote } from "lucide-react"
 const testimonials = [
   {
     quote:
-      "I wrote letters to my children for every milestone — their 18th birthdays, their weddings, their first days of parenthood. Afternote lets me be there, even if I can't be.",
+      "I wrote letters to my children for every milestone — their 18th birthdays, their weddings, their first days of parenthood. EchoLove lets me be there, even if I can't be.",
     name: "Margaret L.",
     role: "Mother of three",
   },
   {
     quote:
-      "After my diagnosis, I needed a way to leave words behind. Afternote gave me peace of mind knowing my family will hear from me when they need it most.",
+      "After my diagnosis, I needed a way to leave words behind. EchoLove gave me peace of mind knowing my family will hear from me when they need it most.",
     name: "David R.",
     role: "Father and teacher",
   },
   {
     quote:
-      "It's not just about the future. I use Afternote to store memories I don't want to forget — moments of gratitude, lessons learned, love expressed.",
+      "It's not just about the future. I use EchoLove to store memories I don't want to forget — moments of gratitude, lessons learned, love expressed.",
     name: "Amara K.",
     role: "Writer and storyteller",
   },

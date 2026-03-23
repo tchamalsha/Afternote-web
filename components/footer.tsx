@@ -6,9 +6,9 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-10">
         <div className="flex items-center gap-2">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-            <span className="text-xs font-bold text-primary-foreground font-serif">A</span>
+            <span className="text-xs font-bold text-primary-foreground font-serif">E</span>
           </div>
-          <span className="text-lg font-semibold text-foreground">Afternote</span>
+          <span className="text-lg font-semibold text-foreground">EchoLove</span>
         </div>
 
         <div className="flex flex-col items-center gap-6 md:flex-row md:gap-12">
@@ -43,7 +43,7 @@ export function Footer() {
         </div>
 
         <p className="text-xs text-muted-foreground">
-          &copy; {new Date().getFullYear()} Afternote. All rights reserved.
+          &copy; {new Date().getFullYear()} EchoLove. All rights reserved.
         </p>
       </div>
     </footer>

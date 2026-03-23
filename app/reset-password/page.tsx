@@ -1,14 +1,32 @@
 "use client"
 
-import { useState, Suspense } from "react"
+import { useState, Suspense, useEffect } from "react"
 import type { FormEvent } from "react"
 import Link from "next/link"
-import { useSearchParams } from "next/navigation"
 import { ArrowLeft, Lock, CheckCircle, Eye, EyeOff, ShieldX } from "lucide-react"
 
 function ResetPasswordContent() {
-  const searchParams = useSearchParams()
-  const token = searchParams.get("token")
+  const [accessToken, setAccessToken] = useState<string | null>(null)
+  const [expiresAt, setExpiresAt] = useState<number | null>(null)
+  const [isExpired, setIsExpired] = useState(false)
+
+  // Parse hash-based parameters from Supabase
+  useEffect(() => {
+    const hash = window.location.hash.substring(1) // Remove #
+    const params = new URLSearchParams(hash)
+    
+    const token = params.get("access_token")
+    const expiresAtStr = params.get("expires_at")
+    
+    if (token && expiresAtStr) {
+      const expiresAtTimestamp = parseInt(expiresAtStr, 10)
+      const currentTimestamp = Math.floor(Date.now() / 1000)
+      
+      setAccessToken(token)
+      setExpiresAt(expiresAtTimestamp)
+      setIsExpired(currentTimestamp > expiresAtTimestamp)
+    }
+  }, [])
 
   const [submitted, setSubmitted] = useState(false)
   const [password, setPassword] = useState("")
@@ -26,7 +44,7 @@ function ResetPasswordContent() {
 
   const allChecksMet = passwordChecks.every((check) => check.met)
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setError("")
 
@@ -40,18 +58,39 @@ function ResetPasswordContent() {
       return
     }
 
-    setSubmitted(true)
+    try {
+      const response = await fetch("/api/reset-password", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          accessToken,
+          newPassword: password,
+        }),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        setError(data.error || "Failed to reset password. Please try again.")
+        return
+      }
+
+      setSubmitted(true)
+    } catch (err) {
+      setError("An error occurred. Please try again.")
+      console.error(err)
+    }
   }
 
   // ── No / invalid token ───────────────────────────────────────────────────
-  if (!token) {
+  if (!accessToken || isExpired) {
     return (
       <main className="flex min-h-screen flex-col items-center justify-center px-6 py-16">
         <Link href="/" className="mb-10 flex items-center gap-2">
           <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary">
-            <span className="text-sm font-bold text-primary-foreground font-serif">A</span>
+            <span className="text-sm font-bold text-primary-foreground font-serif">E</span>
           </div>
-          <span className="text-xl font-semibold tracking-tight text-foreground">Afternote</span>
+          <span className="text-xl font-semibold tracking-tight text-foreground">EchoLove</span>
         </Link>
 
         <div className="w-full max-w-md">
@@ -91,9 +130,9 @@ function ResetPasswordContent() {
       {/* Logo */}
       <Link href="/" className="mb-10 flex items-center gap-2">
         <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary">
-          <span className="text-sm font-bold text-primary-foreground font-serif">A</span>
+          <span className="text-sm font-bold text-primary-foreground font-serif">E</span>
         </div>
-        <span className="text-xl font-semibold tracking-tight text-foreground">Afternote</span>
+        <span className="text-xl font-semibold tracking-tight text-foreground">EchoLove</span>
       </Link>
 
       <div className="w-full max-w-md">
