@@ -21,7 +21,7 @@ export function Navbar() {
             <span className="text-sm font-bold text-primary-foreground font-serif">E</span>
           </div>
           <span className="text-xl font-semibold tracking-tight text-foreground">
-            EchoLove
+            EternalNote
           </span>
         </a>
 

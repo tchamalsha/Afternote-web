@@ -3,8 +3,8 @@ import { InnerNavbar } from "@/components/inner-navbar"
 import { InnerFooter } from "@/components/inner-footer"
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — EchoLove",
-  description: "How EchoLove collects, uses, and protects your personal information and the memories you entrust to us.",
+  title: "Privacy Policy — EternalNote",
+  description: "How EternalNote collects, uses, and protects your personal information and the memories you entrust to us.",
 }
 
 export default function PrivacyPolicy() {
@@ -30,12 +30,12 @@ export default function PrivacyPolicy() {
         <div className="flex flex-col gap-12">
           <Section title="Introduction">
             <p>
-              At EchoLove, your privacy is not just a policy — it is a promise. We understand that the memories,
+              At EternalNote, your privacy is not just a policy — it is a promise. We understand that the memories,
               messages, and words you entrust to us are deeply personal. This Privacy Policy explains how we collect,
               use, store, and protect your information when you use our services.
             </p>
             <p>
-              By using EchoLove, you agree to the collection and use of information in accordance with this policy.
+              By using EternalNote, you agree to the collection and use of information in accordance with this policy.
               If you do not agree with any part of this policy, please do not use our services.
             </p>
           </Section>
@@ -147,8 +147,8 @@ export default function PrivacyPolicy() {
           <Section title="Contact Us">
             <p>
               If you have any questions about this Privacy Policy, please reach out to us at{" "}
-              <a href="mailto:privacy@echolove.com" className="font-medium text-primary underline underline-offset-4 transition-colors hover:text-primary/80">
-                privacy@echolove.com
+              <a href="mailto:privacy@eternalnote.com" className="font-medium text-primary underline underline-offset-4 transition-colors hover:text-primary/80">
+                privacy@eternalnote.com
               </a>{" "}
               or visit our{" "}
               <a href="/contact" className="font-medium text-primary underline underline-offset-4 transition-colors hover:text-primary/80">

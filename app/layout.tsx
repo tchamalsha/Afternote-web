@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair' })
 
 export const metadata: Metadata = {
-  title: 'EchoLove — Preserve What Matters Most',
+  title: 'EternalNote — Preserve What Matters Most',
   description: 'A calm, secure space to store messages, memories, and meaningful words for the people you love — delivered when the time is right.',
   generator: 'v0.app',
   keywords: ['memory', 'legacy', 'letters', 'messages', 'preserve', 'family'],

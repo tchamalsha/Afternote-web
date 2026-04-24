@@ -26,7 +26,7 @@ const features = [
     icon: Feather,
     title: "Gentle by Design",
     description:
-      "No noise, no clutter. EchoLove is intentionally calm, letting you focus on the words that matter most.",
+      "No noise, no clutter. EternalNote is intentionally calm, letting you focus on the words that matter most.",
   },
 ]
 

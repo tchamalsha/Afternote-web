@@ -44,7 +44,7 @@ export function CTA() {
           Begin your legacy today
         </h2>
         <p className="mx-auto mt-4 max-w-md text-balance text-muted-foreground">
-          Sign up to be among the first to use EchoLove. We&apos;ll let you
+          Sign up to be among the first to use EternalNote. We&apos;ll let you
           know the moment it&apos;s ready.
         </p>
 
