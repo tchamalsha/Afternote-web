@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy — EternalNote</title>
+  <title>Privacy Policy — PawVault</title>
   <style>
     * {
       margin: 0;
@@ -14,14 +14,14 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #FAF8F5;
+      background: #F7F9F7;
       color: #1A1A1A;
       line-height: 1.7;
     }
 
     header {
       background: white;
-      border-bottom: 1px solid #EDE9E3;
+      border-bottom: 1px solid #E2EAE2;
       padding: 20px 24px;
       display: flex;
       align-items: center;
@@ -34,11 +34,10 @@
       justify-content: center;
       width: 40px;
       height: 40px;
-      background: #C4964A;
+      background: #3A7D44;
       border-radius: 12px;
       color: white;
-      font-size: 20px;
-      font-weight: 700;
+      font-size: 22px;
       flex-shrink: 0;
     }
 
@@ -60,7 +59,7 @@
       font-weight: 600;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: #C4964A;
+      color: #3A7D44;
       margin-bottom: 12px;
     }
 
@@ -74,7 +73,7 @@
 
     .meta {
       font-size: 14px;
-      color: #9E9895;
+      color: #7A8C7A;
       margin-bottom: 56px;
     }
 
@@ -85,15 +84,17 @@
     }
 
     section h2 {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 600;
       color: #1A1A1A;
       margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #E2EAE2;
     }
 
     section p {
       font-size: 15px;
-      color: #4A4540;
+      color: #3D4A3D;
       line-height: 1.75;
       margin-bottom: 10px;
     }
@@ -114,7 +115,7 @@
       display: flex;
       gap: 12px;
       font-size: 15px;
-      color: #4A4540;
+      color: #3D4A3D;
       line-height: 1.65;
     }
 
@@ -123,7 +124,7 @@
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: #C4964A;
+      background: #3A7D44;
       margin-top: 7px;
       flex-shrink: 0;
     }
@@ -134,21 +135,31 @@
     }
 
     a {
-      color: #C4964A;
+      color: #3A7D44;
       text-decoration: underline;
       text-underline-offset: 3px;
     }
 
     a:hover {
-      opacity: 0.8;
+      opacity: 0.75;
+    }
+
+    .callout {
+      background: #EDF4EE;
+      border-left: 4px solid #3A7D44;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      font-size: 14px;
+      color: #2D5C34;
+      margin-top: 10px;
     }
 
     footer {
-      border-top: 1px solid #EDE9E3;
+      border-top: 1px solid #E2EAE2;
       padding: 28px 24px;
       text-align: center;
       font-size: 13px;
-      color: #9E9895;
+      color: #7A8C7A;
     }
   </style>
 </head>
@@ -156,110 +167,167 @@
 <body>
 
   <header>
-    <div class="logo-mark">E</div>
-    <span class="logo-name">EternalNote</span>
+    <div class="logo-mark">🐾</div>
+    <span class="logo-name">PawVault</span>
   </header>
 
   <main>
     <p class="page-label">Legal</p>
     <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: February 23, 2026</p>
+    <p class="meta">Effective date: May 1, 2026</p>
 
     <div class="sections">
 
       <section>
-        <h2>Introduction</h2>
+        <h2>1. Introduction</h2>
         <p>
-          At EternalNote, your privacy is not just a policy — it is a promise. We understand that the memories,
-          messages, and words you entrust to us are deeply personal. This Privacy Policy explains how we collect,
-          use, store, and protect your information when you use our services.
+          Welcome to PawVault. PawVault is a pet health vault app for dog owners, available on iOS and Android,
+          built with React Native / Expo. It lets you store your dog's medical records, vaccination history,
+          vet details, reminders, behaviour logs, and generate handover sheets for pet sitters.
         </p>
         <p>
-          By using EternalNote, you agree to the collection and use of information in accordance with this policy.
-          If you do not agree with any part of this policy, please do not use our services.
+          This Privacy Policy explains what information we collect, how we use it, and your rights regarding
+          your data. We are committed to keeping your information — and your pet's information — safe and private.
+        </p>
+        <p>
+          By using PawVault, you agree to the practices described in this policy. If you do not agree, please
+          discontinue use of the app.
         </p>
       </section>
 
       <section>
-        <h2>Information We Collect</h2>
-        <p>We collect the following types of information to provide and improve our services:</p>
+        <h2>2. Information We Collect</h2>
+        <p>We only collect information that is necessary to provide the PawVault service:</p>
+
+        <p><strong>Account Information</strong></p>
         <ul>
-          <li><span class="dot"></span><span><strong>Account Information:</strong> Your name, email address, and password when you create an account.</span></li>
-          <li><span class="dot"></span><span><strong>Content You Create:</strong> Messages, letters, notes, and any media you upload to be delivered to your recipients.</span></li>
-          <li><span class="dot"></span><span><strong>Recipient Details:</strong> Names and contact information of the people you designate as recipients.</span></li>
-          <li><span class="dot"></span><span><strong>Usage Data:</strong> Information about how you interact with our platform, including device type, browser, and access times.</span></li>
+          <li><span class="dot"></span><span>Your <strong>name</strong> and <strong>email address</strong>, collected via Firebase Authentication when you create an account or sign in.</span></li>
         </ul>
-      </section>
 
-      <section>
-        <h2>How We Use Your Information</h2>
-        <p>We use your information solely to deliver the service you expect from us:</p>
+        <p style="margin-top:16px"><strong>Pet Profile Information</strong></p>
         <ul>
-          <li><span class="dot"></span><span>To store and deliver your messages and memories to designated recipients at the appropriate time.</span></li>
-          <li><span class="dot"></span><span>To maintain, protect, and improve our services.</span></li>
-          <li><span class="dot"></span><span>To communicate with you about your account and service updates.</span></li>
-          <li><span class="dot"></span><span>To comply with legal obligations and enforce our terms of service.</span></li>
+          <li><span class="dot"></span><span>Dog name, breed, date of birth, gender, weight, and neutered status.</span></li>
+          <li><span class="dot"></span><span>A pet photo — stored <strong>locally on your device only</strong> and never uploaded to any server.</span></li>
         </ul>
-      </section>
 
-      <section>
-        <h2>Data Security</h2>
-        <p>
-          We employ industry-standard security measures to protect your data. All content is encrypted both in
-          transit and at rest using AES-256 encryption. Access to your stored messages is strictly controlled
-          and limited to authorized systems that facilitate delivery.
-        </p>
-        <p>
-          We regularly review our security practices and update them to stay ahead of potential threats.
-          However, no method of electronic storage is 100% secure, and we cannot guarantee absolute security.
-        </p>
-      </section>
-
-      <section>
-        <h2>Data Retention</h2>
-        <p>
-          Your content is stored securely until it is delivered to your designated recipients or until you
-          choose to delete it. Account information is retained for as long as your account remains active.
-          If you close your account, we will delete your personal data within 90 days, except where retention
-          is required by law.
-        </p>
-      </section>
-
-      <section>
-        <h2>Third-Party Sharing</h2>
-        <p>
-          We do not sell, trade, or rent your personal information to third parties. We may share limited
-          data with trusted service providers who assist us in operating our platform, provided they agree
-          to keep your information confidential. We may also disclose information when required by law or
-          to protect our rights and safety.
-        </p>
-      </section>
-
-      <section>
-        <h2>Your Rights</h2>
-        <p>You have the right to:</p>
+        <p style="margin-top:16px"><strong>Health &amp; Care Records</strong></p>
         <ul>
-          <li><span class="dot"></span><span>Access, correct, or delete your personal information at any time.</span></li>
-          <li><span class="dot"></span><span>Request a copy of the data we hold about you.</span></li>
-          <li><span class="dot"></span><span>Withdraw consent for data processing where applicable.</span></li>
-          <li><span class="dot"></span><span>Lodge a complaint with a data protection authority.</span></li>
+          <li><span class="dot"></span><span>Vet reports, medications, feeding schedules, and known allergies.</span></li>
+          <li><span class="dot"></span><span>Vet clinic details and emergency contact information.</span></li>
+          <li><span class="dot"></span><span>Vaccination history, reminders, and behaviour logs.</span></li>
         </ul>
+
+        <p style="margin-top:16px"><strong>App Usage Data</strong></p>
+        <ul>
+          <li><span class="dot"></span><span>Activity dates used to track your daily usage streak within the app. No detailed behavioural analytics are collected.</span></li>
+        </ul>
+
+        <div class="callout">
+          We do <strong>not</strong> collect location data, payment information, advertising identifiers, or any sensitive personal data beyond what is listed above.
+        </div>
       </section>
 
       <section>
-        <h2>Changes to This Policy</h2>
+        <h2>3. How We Use Your Information</h2>
+        <p>We use the information we collect only to make PawVault work for you:</p>
+        <ul>
+          <li><span class="dot"></span><span>To create and manage your account securely.</span></li>
+          <li><span class="dot"></span><span>To store, display, and sync your pet's health records and care information across your devices.</span></li>
+          <li><span class="dot"></span><span>To send reminders you have set (e.g., vaccination due dates, medication schedules).</span></li>
+          <li><span class="dot"></span><span>To generate handover sheets for pet sitters using your stored pet data.</span></li>
+          <li><span class="dot"></span><span>To track your daily streak and display app activity within the app.</span></li>
+          <li><span class="dot"></span><span>To respond to support requests you initiate.</span></li>
+        </ul>
         <p>
-          We may update this Privacy Policy from time to time. We will notify you of any significant changes
-          by posting the new policy on this page and updating the "Last updated" date. We encourage you
-          to review this page periodically.
+          We do <strong>not</strong> use your data for advertising, profiling, or any purpose beyond operating the app.
         </p>
       </section>
 
       <section>
-        <h2>Contact Us</h2>
+        <h2>4. Data Storage &amp; Security</h2>
         <p>
-          If you have any questions about this Privacy Policy, please reach out to us at
-          <a href="mailto:privacy@eternalnote.com">privacy@eternalnote.com</a>.
+          Your account data and health records are stored securely in <strong>Google Firebase Firestore</strong>,
+          a cloud database. All data is transmitted over encrypted HTTPS connections and stored with
+          Firebase's built-in security controls.
+        </p>
+        <p>
+          <strong>Pet photos are stored locally on your device only.</strong> They are never uploaded to our
+          servers or any third-party service.
+        </p>
+        <p>
+          We implement reasonable technical and organisational measures to protect your data from unauthorised
+          access, loss, or misuse. However, no system is completely immune to risk, and we encourage you to
+          use a strong password and keep your device secure.
+        </p>
+        <p>
+          Your data is retained for as long as your account is active. If you delete your account, all
+          associated data stored in Firebase is permanently deleted within 30 days.
+        </p>
+      </section>
+
+      <section>
+        <h2>5. Third-Party Services</h2>
+        <p>PawVault uses the following third-party service:</p>
+        <ul>
+          <li><span class="dot"></span><span><strong>Firebase (Google LLC)</strong> — used for user authentication (Firebase Auth) and cloud data storage (Firebase Firestore). Firebase may process your data on servers located outside your country. Google's privacy policy is available at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>.</span></li>
+        </ul>
+        <p>
+          We do <strong>not</strong> use any advertising networks, analytics platforms (beyond Firebase's
+          built-in infrastructure), or data brokers. We do not sell or share your data with any third parties
+          for commercial purposes.
+        </p>
+      </section>
+
+      <section>
+        <h2>6. Children's Privacy</h2>
+        <p>
+          PawVault is not directed at children under the age of 13. We do not knowingly collect personal
+          information from children under 13. If you believe a child has provided us with personal information
+          without parental consent, please contact us at the email address below and we will delete that
+          information promptly.
+        </p>
+      </section>
+
+      <section>
+        <h2>7. Your Rights</h2>
+        <p>You have the following rights regarding your personal data:</p>
+        <ul>
+          <li><span class="dot"></span><span><strong>Access:</strong> You can view all data stored in your account directly within the app at any time.</span></li>
+          <li><span class="dot"></span><span><strong>Correction:</strong> You can update or correct any of your pet or account information from within the app.</span></li>
+          <li><span class="dot"></span><span><strong>Deletion:</strong> You can delete individual records, your entire pet profile, or your account at any time. Deleting your account permanently removes all associated data from our servers.</span></li>
+          <li><span class="dot"></span><span><strong>Data Portability:</strong> You may request a copy of your stored data by contacting us at the email below.</span></li>
+          <li><span class="dot"></span><span><strong>Withdraw Consent:</strong> You may stop using the app and request account deletion at any time.</span></li>
+        </ul>
+        <p>
+          To exercise any of these rights, please contact us at
+          <a href="mailto:asithanuwanbandara@gmail.com">asithanuwanbandara@gmail.com</a>.
+        </p>
+      </section>
+
+      <section>
+        <h2>8. Changes to This Policy</h2>
+        <p>
+          We may update this Privacy Policy from time to time to reflect changes in the app or applicable law.
+          When we do, we will update the effective date at the top of this page. For significant changes, we
+          will notify you through the app or via email.
+        </p>
+        <p>
+          We encourage you to review this policy periodically. Continued use of PawVault after any changes
+          constitutes your acceptance of the updated policy.
+        </p>
+      </section>
+
+      <section>
+        <h2>9. Contact Us</h2>
+        <p>
+          If you have any questions, concerns, or requests regarding this Privacy Policy or how your data
+          is handled, please contact us at:
+        </p>
+        <p>
+          <strong>Email:</strong> <a href="mailto:asithanuwanbandara@gmail.com">asithanuwanbandara@gmail.com</a>
+        </p>
+        <p>
+          We aim to respond to all privacy-related enquiries within 5 business days.
         </p>
       </section>
 
@@ -267,7 +335,7 @@
   </main>
 
   <footer>
-    &copy; 2026 EternalNote. All rights reserved.
+    &copy; 2026 PawVault. All rights reserved.
   </footer>
 
 </body>
