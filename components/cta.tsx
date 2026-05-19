@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
+import Link from "next/link"
 
 export function CTA() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -38,36 +39,33 @@ export function CTA() {
         style={{ opacity: 0, transform: "translateY(24px)" }}
       >
         <span className="mb-4 inline-block text-sm font-medium tracking-wide text-primary uppercase">
-          Get Started
+          Get in Touch
         </span>
         <h2 className="text-pretty font-serif text-3xl font-bold text-foreground sm:text-4xl">
-          Begin your legacy today
+          We&apos;d love to hear from you
         </h2>
         <p className="mx-auto mt-4 max-w-md text-balance text-muted-foreground">
-          Sign up to be among the first to use EternalNote. We&apos;ll let you
-          know the moment it&apos;s ready.
+          Have a question, suggestion, or just want to say hello? Reach out and
+          our team will get back to you as soon as we can.
         </p>
 
-        <form
-          className="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row"
-          onSubmit={(e) => e.preventDefault()}
-        >
-          <input
-            type="email"
-            required
-            placeholder="Enter your email"
-            className="flex-1 rounded-xl border border-input bg-card px-5 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-          />
-          <button
-            type="submit"
-            className="rounded-xl bg-primary px-8 py-3 text-sm font-medium text-primary-foreground shadow-md shadow-primary/20 transition-all hover:opacity-90 hover:shadow-lg hover:shadow-primary/25"
+        <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+          <Link
+            href="/contact"
+            className="rounded-xl bg-primary px-8 py-3.5 text-sm font-medium text-primary-foreground shadow-md shadow-primary/20 transition-all hover:opacity-90 hover:shadow-lg hover:shadow-primary/25"
           >
-            Join Waitlist
-          </button>
-        </form>
+            Contact Us
+          </Link>
+          <a
+            href="mailto:asithanuwanbandara@gmail.com"
+            className="rounded-xl border border-border bg-card px-8 py-3.5 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+          >
+            Email Directly
+          </a>
+        </div>
 
         <p className="mt-4 text-xs text-muted-foreground">
-          No spam. Just a quiet note when the time is right.
+          We typically respond within 24 hours.
         </p>
       </div>
     </section>

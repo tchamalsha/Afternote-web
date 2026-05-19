@@ -12,7 +12,7 @@ export async function POST(req: Request) {
 
     await resend.emails.send({
       from: "EternalNote Contact <noreply@eternalnote.com>",
-      to: ["hello@eternalnote.com"],
+      to: ["asithanuwanbandara@gmail.com"],
       subject: `[Contact] ${subject}`,
       reply_to: email,
       html: `<p><b>Name:</b> ${name}</p><p><b>Email:</b> ${email}</p><p><b>Message:</b><br/>${message.replace(/\n/g, '<br/>')}</p>`

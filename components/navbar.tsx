@@ -7,7 +7,7 @@ const navLinks = [
   { label: "Features", href: "#features" },
   { label: "How It Works", href: "#how-it-works" },
   { label: "Testimonials", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/contact" },
 ]
 
 export function Navbar() {
@@ -40,10 +40,10 @@ export function Navbar() {
         </ul>
 
         <a
-          href="#contact"
+          href="/contact"
           className="hidden rounded-xl bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90 md:inline-block"
         >
-          Get Started
+          Contact Us
         </a>
 
         {/* Mobile menu button */}
@@ -73,11 +73,11 @@ export function Navbar() {
             ))}
             <li>
               <a
-                href="#contact"
+                href="/contact"
                 onClick={() => setMobileOpen(false)}
                 className="mt-2 inline-block rounded-xl bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
               >
-                Get Started
+                Contact Us
               </a>
             </li>
           </ul>

@@ -22,9 +22,9 @@ export function Footer() {
             <a href="#testimonials" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
               Testimonials
             </a>
-            <a href="#contact" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+            <Link href="/contact" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
               Contact
-            </a>
+            </Link>
           </nav>
 
           <span className="hidden h-4 w-px bg-border md:block" aria-hidden="true" />

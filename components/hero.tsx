@@ -41,10 +41,10 @@ export function Hero() {
 
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <a
-            href="#contact"
+            href="/contact"
             className="rounded-xl bg-primary px-8 py-3.5 text-sm font-medium text-primary-foreground shadow-lg shadow-primary/20 transition-all hover:opacity-90 hover:shadow-xl hover:shadow-primary/25"
           >
-            Start Preserving
+            Contact Us
           </a>
           <a
             href="#features"
